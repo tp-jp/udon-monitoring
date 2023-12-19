@@ -17,10 +17,10 @@ namespace TpLab.UdonMonitoring.Udon
         UdonSharpBehaviour targetScript;
 
         [SerializeField]
-        Color activeColor = new Color(0f, 1f, 0f, 0.5f);
+        Color activeLineColor = new Color(0f, 1f, 0f, 0.5f);
 
         [SerializeField]
-        Color inactiveColor = new Color(1f, 0f, 0f, 0.5f);
+        Color inactiveLineColor = new Color(1f, 0f, 0f, 0.5f);
         
         void Start()
         {
@@ -29,7 +29,7 @@ namespace TpLab.UdonMonitoring.Udon
 
         void Update()
         {
-            activeLine.color = targetScript.enabled ? activeColor : inactiveColor;
+            activeLine.color = targetScript.enabled ? activeLineColor : inactiveLineColor;
         }
     }
 }

@@ -60,8 +60,8 @@ namespace TpLab.UdonMonitoring.Editor
                 udonDetailButton.SetFieldValue("objectName", objectName);
                 udonDetailButton.SetFieldValue("activeLine", activeLine);
                 udonDetailButton.SetFieldValue("targetScript", profile.Script);
-                udonDetailButton.SetFieldValue("activeColor", setting.ActiveColor);
-                udonDetailButton.SetFieldValue("inactiveColor", setting.InactiveColor);
+                udonDetailButton.SetFieldValue("activeLineColor", setting.ActiveLineColor);
+                udonDetailButton.SetFieldValue("inactiveLineColor", setting.InactiveLineColor);
 
                 // DetailView
                 var detailView = Instantiate(detailViewTemplate.gameObject, detailViewContent, false);

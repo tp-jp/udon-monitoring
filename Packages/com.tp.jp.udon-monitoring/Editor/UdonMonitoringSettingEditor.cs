@@ -15,8 +15,8 @@ namespace TpLab.UdonMonitoring.Editor
         SerializedProperty _yColor;
         SerializedProperty _zColor;
         SerializedProperty _wColor;
-        SerializedProperty _activeColor;
-        SerializedProperty _inactiveColor;
+        SerializedProperty _activeLineColor;
+        SerializedProperty _inactiveLineColor;
         
         void OnEnable()
         {
@@ -48,8 +48,8 @@ namespace TpLab.UdonMonitoring.Editor
             EditorGUILayout.PropertyField(_yColor);
             EditorGUILayout.PropertyField(_zColor);
             EditorGUILayout.PropertyField(_wColor);
-            EditorGUILayout.PropertyField(_activeColor);
-            EditorGUILayout.PropertyField(_inactiveColor);
+            EditorGUILayout.PropertyField(_activeLineColor);
+            EditorGUILayout.PropertyField(_inactiveLineColor);
 
             serializedObject.ApplyModifiedProperties();
         }

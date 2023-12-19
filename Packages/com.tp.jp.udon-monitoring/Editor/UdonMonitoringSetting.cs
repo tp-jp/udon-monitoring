@@ -2,7 +2,6 @@ using UnityEngine;
 
 namespace TpLab.UdonMonitoring.Editor
 {
-    // [CreateAssetMenu(fileName = "MonitoringSetting", menuName = "TpLab/UdonMonitoring/UdonMonitoringSetting")]
     public class UdonMonitoringSetting : ScriptableObject
     {
         [Header("General")]
@@ -46,16 +45,17 @@ namespace TpLab.UdonMonitoring.Editor
 
         [Header("Active Line Color")]
         [SerializeField]
-        Color activeColor = new Color(0f, 1f, 0f, 0.5f);
+        Color activeLineColor = new Color(0f, 1f, 0f, 0.5f);
 
         [SerializeField]
-        Color inactiveColor = new Color(1f, 0f, 0f, 0.5f);
+        Color inactiveLineColor = new Color(1f, 0f, 0f, 0.5f);
 
         #endregion
 
         static UdonMonitoringSetting _instance;
 
-        public static UdonMonitoringSetting Instance => _instance ?? (_instance = AssetRepository.LoadSetting<UdonMonitoringSetting>());
+        public static UdonMonitoringSetting Instance
+            => _instance ?? (_instance = AssetRepository.LoadSetting<UdonMonitoringSetting>());
 
         /// <summary>
         /// 有効にするとメンバー変数名が変換される（_isOnLid => Is On Lid）
@@ -103,13 +103,13 @@ namespace TpLab.UdonMonitoring.Editor
         public Color WColor => wColor;
         
         /// <summary>
-        /// Activeの色
+        /// ActiveLineの色
         /// </summary>
-        public Color ActiveColor => activeColor;
+        public Color ActiveLineColor => activeLineColor;
         
         /// <summary>
-        /// Inactiveの色
+        /// InactiveLineの色
         /// </summary>
-        public Color InactiveColor => inactiveColor;
+        public Color InactiveLineColor => inactiveLineColor;
     }
 }
