@@ -251,8 +251,8 @@ MonoBehaviour:
   objectName: {fileID: 0}
   activeLine: {fileID: 0}
   targetScript: {fileID: 0}
-  activeColor: {r: 0, g: 1, b: 0, a: 0.5}
-  inactiveColor: {r: 1, g: 0, b: 0, a: 0.5}
+  activeLineColor: {r: 0, g: 1, b: 0, a: 0.5}
+  inactiveLineColor: {r: 1, g: 0, b: 0, a: 0.5}
 --- !u!114 &7414295038762444550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2678,7 +2678,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8283619097838015570}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.2, z: 1.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2113622590375166920}
