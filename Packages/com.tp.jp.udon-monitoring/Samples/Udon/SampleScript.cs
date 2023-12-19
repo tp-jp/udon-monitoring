@@ -1,5 +1,6 @@
 ﻿using UdonSharp;
 using UnityEngine;
+using VRC.SDK3.Data;
 
 namespace TpLab.UdonMonitoring.Udon.Samples
 {
@@ -38,5 +39,11 @@ namespace TpLab.UdonMonitoring.Udon.Samples
         
         [SerializeField]
         Quaternion quaternionValue = Quaternion.identity;
+
+        [SerializeField]
+        DataList dataListValue = new DataList()
+        {
+            1, 2, 3, 4
+        };
     }
 }

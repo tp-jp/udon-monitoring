@@ -20,6 +20,7 @@ namespace TpLab.UdonMonitoring.Udon
         Vector3,
         Quaternion,
         Component,
+        DataList,
         Unknown,
     }
 }

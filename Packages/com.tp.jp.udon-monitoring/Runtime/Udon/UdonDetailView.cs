@@ -71,7 +71,7 @@ namespace TpLab.UdonMonitoring.Udon
                 var label = fieldMetadata["label"].String;
                 var value = targetScript.GetProgramVariable(fieldName);
                 variableNames[i].text = label;
-                variableValues[i].text = FormatValue(value, fieldType, isArray, _settingMetadata);
+                variableValues[i].text = FormatValue(value, fieldType, _settingMetadata, isArray);
             }
         }
 
@@ -96,7 +96,7 @@ namespace TpLab.UdonMonitoring.Udon
             return names[names.Length - 1];
         }
 
-        static string FormatValue(object value, FieldType fieldType, bool isArray, DataDictionary setting)
+        static string FormatValue(object value, FieldType fieldType, DataDictionary setting, bool isArray = false)
         {
             if (value == null) return FormatNullValue(setting);
             if (isArray)
@@ -151,6 +151,8 @@ namespace TpLab.UdonMonitoring.Udon
                         return FormatValue((Vector3)value, setting);
                     case FieldType.Quaternion:
                         return FormatValue((Quaternion)value, setting);
+                    case FieldType.DataList:
+                        return FormatDataList((DataList)value, setting);
                 }
             }
 
@@ -179,9 +181,73 @@ namespace TpLab.UdonMonitoring.Udon
             var result = "";
             for (var i = 0; i < array.Length; i++)
             {
-                result += $"[{i}]: " + FormatValue(array[i], fieldType, false, setting) + "\n";
+                result += $"[{i}]: " + FormatValue(array[i], fieldType, setting) + "\n";
             }
 
+            return result.Length == 0
+                ? FormatNullValue(setting)
+                : result.Remove(result.Length - 1);
+        }
+
+        static string FormatDataList(DataList dataList, DataDictionary setting)
+        {
+            var result = "";
+            for (var i = 0; i < dataList.Count; i++)
+            {
+                result += $"[{i}]: ";
+                switch (dataList[i].TokenType)
+                {
+                    case TokenType.Null:
+                        result += FormatNullValue(setting);
+                        break;
+                    case TokenType.Boolean:
+                        result += FormatValue(dataList[i].Boolean, setting);
+                        break;
+                    case TokenType.SByte:
+                        result += FormatValue(dataList[i].SByte, FieldType.Sbyte, setting);
+                        break;
+                    case TokenType.Byte:
+                        result += FormatValue(dataList[i].Byte, FieldType.Byte, setting);
+                        break;
+                    case TokenType.Short:
+                        result += FormatValue(dataList[i].Short, FieldType.Short, setting);
+                        break;
+                    case TokenType.UShort:
+                        result += FormatValue(dataList[i].UShort, FieldType.Ushort, setting);
+                        break;
+                    case TokenType.Int:
+                        result += FormatValue(dataList[i].Int, FieldType.Int, setting);
+                        break;
+                    case TokenType.UInt:
+                        result += FormatValue(dataList[i].UInt, FieldType.Uint, setting);
+                        break;
+                    case TokenType.Long:
+                        result += FormatValue(dataList[i].Long, FieldType.Long, setting);
+                        break;
+                    case TokenType.ULong:
+                        result += FormatValue(dataList[i].ULong, FieldType.Ulong, setting);
+                        break;
+                    case TokenType.Float:
+                        result += FormatValue(dataList[i].Float, FieldType.Ulong, setting);
+                        break;
+                    case TokenType.Double:
+                        result += FormatValue(dataList[i].Double, FieldType.Double, setting);
+                        break;
+                    case TokenType.String:
+                        result += FormatValue(dataList[i].String, FieldType.String, setting);
+                        break;
+                    case TokenType.DataList:
+                        result += FormatValue(dataList[i].DataList, FieldType.DataList, setting);
+                        break;
+                    case TokenType.DataDictionary:
+                        result += FormatValue(dataList[i].DataDictionary, FieldType.Unknown, setting);
+                        break;
+                    case TokenType.Reference:
+                        result += FormatValue(dataList[i].Reference, FieldType.Unknown, setting);
+                        break;
+                }
+                result += "\n";
+            }
             return result.Length == 0
                 ? FormatNullValue(setting)
                 : result.Remove(result.Length - 1);

@@ -2,6 +2,8 @@ using System;
 using System.Reflection;
 using TpLab.UdonMonitoring.Udon;
 using UnityEditor;
+using UnityEngine;
+using VRC.SDK3.Data;
 
 namespace TpLab.UdonMonitoring.Editor
 {
@@ -85,10 +87,11 @@ namespace TpLab.UdonMonitoring.Editor
             if (type == typeof(double)) return FieldType.Double;
             if (type == typeof(double)) return FieldType.DateTime;
             if (type == typeof(double)) return FieldType.String;
-            if (type == typeof(UnityEngine.Vector2)) return FieldType.Vector2;
-            if (type == typeof(UnityEngine.Vector3)) return FieldType.Vector3;
-            if (type == typeof(UnityEngine.Quaternion)) return FieldType.Quaternion;
-            if (type.IsSubclassOf(typeof(UnityEngine.Component))) return FieldType.Component;
+            if (type == typeof(Vector2)) return FieldType.Vector2;
+            if (type == typeof(Vector3)) return FieldType.Vector3;
+            if (type == typeof(Quaternion)) return FieldType.Quaternion;
+            if (type.IsSubclassOf(typeof(Component))) return FieldType.Component;
+            if (type == typeof(DataList)) return FieldType.DataList;
             return FieldType.Unknown;
         }
     }
