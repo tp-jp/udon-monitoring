@@ -41,6 +41,9 @@ namespace TpLab.UdonMonitoring.Udon
         DataList _fieldMetadata;
         DataDictionary _settingMetadata;
 
+        /// <summary>
+        /// 初期化。
+        /// </summary>
         void Start()
         {
             _fieldMetadata = DeserializeFromJson(fieldMetadataJson, "field metadata").DataList;
@@ -48,11 +51,17 @@ namespace TpLab.UdonMonitoring.Udon
             ownerRecord.SetActive(isShowOwner);
         }
 
+        /// <summary>
+        /// 有効化した際に呼ばれるイベント。
+        /// </summary>
         void OnEnable()
         {
             detailTitle.text = $"<b>{targetScript.name}</b> ({GetUdonTypeShortName(targetScript)})";
         }
 
+        /// <summary>
+        /// 更新処理。
+        /// </summary>
         void Update()
         {
             if (isShowOwner)
@@ -75,6 +84,12 @@ namespace TpLab.UdonMonitoring.Udon
             }
         }
 
+        /// <summary>
+        /// JSONからデシリアライズする。
+        /// </summary>
+        /// <param name="json">JSON文字列</param>
+        /// <param name="name">データ名</param>
+        /// <returns>データトークン</returns>
         static DataToken DeserializeFromJson(string json, string name)
         {
             if (VRCJson.TryDeserializeFromJson(json, out var result))
@@ -96,6 +111,16 @@ namespace TpLab.UdonMonitoring.Udon
             return names[names.Length - 1];
         }
 
+        #region Format
+
+        /// <summary>
+        /// 値をフォーマットする。
+        /// </summary>
+        /// <param name="value">値</param>
+        /// <param name="fieldType">フィールドタイプ</param>
+        /// <param name="setting">設定</param>
+        /// <param name="isArray">配列かどうか</param>
+        /// <returns>フォーマット後の値</returns>
         static string FormatValue(object value, FieldType fieldType, DataDictionary setting, bool isArray = false)
         {
             if (value == null) return FormatNullValue(setting);
@@ -159,23 +184,60 @@ namespace TpLab.UdonMonitoring.Udon
             return value.ToString();
         }
 
+        /// <summary>
+        /// NULL値をフォーマットする。
+        /// </summary>
+        /// <param name="setting">設定</param>
+        /// <returns>フォーマット後の値</returns>
         static string FormatNullValue(DataDictionary setting)
             => $"<color=#{setting["nullColor"].String}>NULL</color>";
 
+        /// <summary>
+        /// bool値をフォーマットする。
+        /// </summary>
+        /// <param name="value">値</param>
+        /// <param name="setting">設定</param>
+        /// <returns>フォーマット後の値</returns>
         static string FormatValue(bool value, DataDictionary setting)
             => value
             ? $"<color=#{setting["trueColor"].String}>TRUE</color>"
             : $"<color=#{setting["falseColor"].String}>FALSE</color>";
 
+        /// <summary>
+        /// Vector2値をフォーマットする。
+        /// </summary>
+        /// <param name="value">値</param>
+        /// <param name="setting">設定</param>
+        /// <returns>フォーマット後の値</returns>
         static string FormatValue(Vector2 value, DataDictionary setting)
             => $"X:<color=#{setting["xColor"].String}>[{value.x}]</color> Y:<color=#{setting["yColor"].String}>[{value.y}]</color>";
 
+        /// <summary>
+        /// Vector3値をフォーマットする。
+        /// </summary>
+        /// <param name="value">値</param>
+        /// <param name="setting">設定</param>
+        /// <returns>フォーマット後の値</returns>
         static string FormatValue(Vector3 value, DataDictionary setting)
             => $"X:<color=#{setting["xColor"].String}>[{value.x}]</color> Y:<color=#{setting["yColor"].String}>[{value.y}]</color> Z:<color=#{setting["zColor"].String}>[{value.z}]</color>";
 
+        /// <summary>
+        /// Quaternion値をフォーマットする。
+        /// </summary>
+        /// <param name="value">値</param>
+        /// <param name="setting">設定</param>
+        /// <returns>フォーマット後の値</returns>
         static string FormatValue(Quaternion value, DataDictionary setting)
             => $"X:<color=#{setting["xColor"].String}>[{value.x}]</color> Y:<color=#{setting["yColor"].String}>[{value.y}]</color> Z:<color=#{setting["zColor"].String}>[{value.z}]</color> W:<color=#{setting["wColor"].String}>[{value.w}]</color>";
 
+        /// <summary>
+        /// 配列をフォーマットする。
+        /// </summary>
+        /// <param name="array">配列</param>
+        /// <param name="fieldType">フィールドタイプ</param>
+        /// <param name="setting">設定</param>
+        /// <typeparam name="T">配列の要素の型</typeparam>
+        /// <returns>フォーマットした値</returns>
         static string FormatArray<T>(T[] array, FieldType fieldType, DataDictionary setting)
         {
             var result = "";
@@ -184,11 +246,17 @@ namespace TpLab.UdonMonitoring.Udon
                 result += $"[{i}]: " + FormatValue(array[i], fieldType, setting) + "\n";
             }
 
-            return result.Length == 0
-                ? FormatNullValue(setting)
-                : result.Remove(result.Length - 1);
+            return result.Length > 0
+                ? result.Remove(result.Length - 1)
+                : result;
         }
 
+        /// <summary>
+        /// DataListをフォーマットする。
+        /// </summary>
+        /// <param name="dataList">データリスト</param>
+        /// <param name="setting">設定</param>
+        /// <returns>フォーマットした値</returns>
         static string FormatDataList(DataList dataList, DataDictionary setting)
         {
             var result = "";
@@ -248,9 +316,11 @@ namespace TpLab.UdonMonitoring.Udon
                 }
                 result += "\n";
             }
-            return result.Length == 0
-                ? FormatNullValue(setting)
-                : result.Remove(result.Length - 1);
+            return result.Length > 0
+                ? result.Remove(result.Length - 1)
+                : result;
         }
+ 
+        #endregion
     }
 }
