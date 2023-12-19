@@ -1,0 +1,35 @@
+﻿using UdonSharp;
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace TpLab.UdonMonitoring.Udon
+{
+    [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
+    public class UdonDetailButton : UdonSharpBehaviour
+    {
+        [SerializeField]
+        Text objectName;
+
+        [SerializeField]
+        Image activeLine;
+
+        [SerializeField]
+        UdonSharpBehaviour targetScript;
+
+        [SerializeField]
+        Color activeColor = new Color(0f, 1f, 0f, 0.5f);
+
+        [SerializeField]
+        Color inactiveColor = new Color(1f, 0f, 0f, 0.5f);
+        
+        void Start()
+        {
+            objectName.text = targetScript.gameObject.name;
+        }
+
+        void Update()
+        {
+            activeLine.color = targetScript.enabled ? activeColor : inactiveColor;
+        }
+    }
+}
