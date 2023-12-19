@@ -25,7 +25,9 @@ VCCから任意のプロジェクトを選択し、「Manage Project」から「
 
 1. Packages/UdonMonitoring/Runtime/Prefab/UdonMonitoring.prefab を Hierarchy にドラッグ＆ドロップします。
 2. Hierarchy上の `UdonMonitoring` を選択し、Inspector を表示します。
-3. Inspector上で設定を行います。
+![image](https://github.com/tp-jp/udon-monitoring/assets/130125691/3897bae9-66e7-4124-8ae9-767d774ece88)
+
+4. Inspector上で設定を行います。
    - TargetScripts  
      監視したい `UdonSharpBehaviour` を指定します。
 
