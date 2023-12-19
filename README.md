@@ -1,40 +1,38 @@
 # UdonMonitoring
 
-UdonSharp‚Ìó‘Ô‚ğŠÄ‹‚·‚éƒfƒoƒbƒOƒc[ƒ‹B
-VRChat‚Ìƒ[ƒ‹ƒhì¬‚È‚Ç‚É‚²—˜—p‚­‚¾‚³‚¢B
+UdonSharpã®çŠ¶æ…‹ã‚’ç›£è¦–ã™ã‚‹ãƒ‡ãƒãƒƒã‚°ãƒ„ãƒ¼ãƒ«ã€‚
+VRChatã®ãƒ¯ãƒ¼ãƒ«ãƒ‰ä½œæˆæ™‚ãªã©ã«ã”åˆ©ç”¨ãã ã•ã„ã€‚
 
-## “±“ü•û–@
+## å°å…¥æ–¹æ³•
 
-VCC‚ğƒCƒ“ƒXƒg[ƒ‹Ï‚İ‚Ìê‡AˆÈ‰º‚Ì**‚Ç‚¿‚ç‚©ˆê‚Â**‚Ìè‡‚ğs‚¤‚±‚Æ‚ÅƒCƒ“ƒ|[ƒg‚Å‚«‚Ü‚·B
+VCCã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«æ¸ˆã¿ã®å ´åˆã€ä»¥ä¸‹ã®**ã©ã¡ã‚‰ã‹ä¸€ã¤**ã®æ‰‹é †ã‚’è¡Œã†ã“ã¨ã§ã‚¤ãƒ³ãƒãƒ¼ãƒˆã§ãã¾ã™ã€‚
 
-- [VCC Listing](https://tp-jp.github.io/vpm-repos/) ‚ÖƒAƒNƒZƒX‚µAuAdd to VCCv‚ğƒNƒŠƒbƒN
+- [VCC Listing](https://tp-jp.github.io/vpm-repos/) ã¸ã‚¢ã‚¯ã‚»ã‚¹ã—ã€ã€ŒAdd to VCCã€ã‚’ã‚¯ãƒªãƒƒã‚¯
 
-- VCC‚ÌƒEƒBƒ“ƒhƒE‚Å `Setting - Packages - Add Repository` ‚Ì‡‚ÉŠJ‚«A `https://tp-jp.github.io/vpm-repos/index.json` ‚ğ’Ç‰Á
+- VCCã®ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã§ `Setting - Packages - Add Repository` ã®é †ã«é–‹ãã€ `https://tp-jp.github.io/vpm-repos/index.json` ã‚’è¿½åŠ 
 
-[VPM CLI](https://vcc.docs.vrchat.com/vpm/cli/) ‚ğg—p‚µ‚ÄƒCƒ“ƒXƒg[ƒ‹‚·‚éê‡AƒRƒ}ƒ“ƒhƒ‰ƒCƒ“‚ğŠJ‚«ˆÈ‰º‚ÌƒRƒ}ƒ“ƒh‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B
+[VPM CLI](https://vcc.docs.vrchat.com/vpm/cli/) ã‚’ä½¿ç”¨ã—ã¦ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹å ´åˆã€ã‚³ãƒãƒ³ãƒ‰ãƒ©ã‚¤ãƒ³ã‚’é–‹ãä»¥ä¸‹ã®ã‚³ãƒãƒ³ãƒ‰ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚
 
 ```
 vpm add repo https://tp-jp.github.io/vpm-repos/index.json
 ```
 
-VCC‚©‚ç”CˆÓ‚ÌƒvƒƒWƒFƒNƒg‚ğ‘I‘ğ‚µAuManage Projectv‚©‚çuManage Packagesv‚ğŠJ‚«‚Ü‚·B
-ˆê——‚Ì’†‚©‚ç `UdonMonitoring` ‚Ì‰E‚É‚ ‚éu{vƒ{ƒ^ƒ“‚ğƒNƒŠƒbƒN‚·‚é‚©uInstalled Vectionv‚©‚ç”CˆÓ‚Ìƒo[ƒWƒ‡ƒ“‚ğ‘I‘ğ‚·‚é‚±‚Æ‚ÅAƒvƒƒWƒFƒNƒg‚ÉƒCƒ“ƒ|[ƒg‚µ‚Ü‚·B
+VCCã‹ã‚‰ä»»æ„ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã‚’é¸æŠã—ã€ã€ŒManage Projectã€ã‹ã‚‰ã€ŒManage Packagesã€ã‚’é–‹ãã¾ã™ã€‚
+ä¸€è¦§ã®ä¸­ã‹ã‚‰ `UdonMonitoring` ã®å³ã«ã‚ã‚‹ã€Œï¼‹ã€ãƒœã‚¿ãƒ³ã‚’ã‚¯ãƒªãƒƒã‚¯ã™ã‚‹ã‹ã€ŒInstalled Vectionã€ã‹ã‚‰ä»»æ„ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚’é¸æŠã™ã‚‹ã“ã¨ã§ã€ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã«ã‚¤ãƒ³ãƒãƒ¼ãƒˆã—ã¾ã™ã€‚
 
-ƒŠƒ|ƒWƒgƒŠ‚ğg‚í‚¸‚É“±“ü‚µ‚½‚¢ê‡‚Í [releases](https://github.com/tp-jp/light-probe-generator/releases) ‚©‚ç unitypackage ‚ğƒ_ƒEƒ“ƒ[ƒh‚µ‚ÄAƒvƒƒWƒFƒNƒg‚ÉƒCƒ“ƒ|[ƒg‚µ‚Ä‚­‚¾‚³‚¢B
+ãƒªãƒã‚¸ãƒˆãƒªã‚’ä½¿ã‚ãšã«å°å…¥ã—ãŸã„å ´åˆã¯ [releases](https://github.com/tp-jp/light-probe-generator/releases) ã‹ã‚‰ unitypackage ã‚’ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã—ã¦ã€ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã«ã‚¤ãƒ³ãƒãƒ¼ãƒˆã—ã¦ãã ã•ã„ã€‚
 
-## g‚¢•û
+## ä½¿ã„æ–¹
 
-1. Packages/UdonMonitoring/Runtime/Prefab/UdonMonitoring.prefab ‚ğ Hierarchy ‚Éƒhƒ‰ƒbƒO•ƒhƒƒbƒv‚µ‚Ü‚·B
+1. Packages/UdonMonitoring/Runtime/Prefab/UdonMonitoring.prefab ã‚’ Hierarchy ã«ãƒ‰ãƒ©ãƒƒã‚°ï¼†ãƒ‰ãƒ­ãƒƒãƒ—ã—ã¾ã™ã€‚
 
-2. Hierarchyã‚Ì `UdonMonitoring` ‚ğ‘I‘ğ‚µAInspector ‚ğ•\¦‚µ‚Ü‚·B
+2. Hierarchyä¸Šã® `UdonMonitoring` ã‚’é¸æŠã—ã€Inspector ã‚’è¡¨ç¤ºã—ã¾ã™ã€‚
 
-3. Inspectorã‚Åİ’è‚ğs‚¢‚Ü‚·B
+3. Inspectorä¸Šã§è¨­å®šã‚’è¡Œã„ã¾ã™ã€‚
    
    - TargetScripts 
-     ŠÄ‹‚µ‚½‚¢ `UdonSharpBehaviour` ‚ğw’è‚µ‚Ü‚·B
+     ç›£è¦–ã—ãŸã„ `UdonSharpBehaviour` ã‚’æŒ‡å®šã—ã¾ã™ã€‚
 
-4. 
-
-## XV—š—ğ
+## æ›´æ–°å±¥æ­´
 
 [CHANGELOG](CHANGELOG.md)
