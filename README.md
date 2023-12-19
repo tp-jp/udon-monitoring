@@ -32,7 +32,9 @@ VCCから任意のプロジェクトを選択し、「Manage Project」から「
 ## 設定方法
 
 1. ツールバーから TpLab>UdonMonitoring を選択します。
-2. 表示されたウィンドウの設定を行い、設定を変更できます。
+2. 表示されたウィンドウの設定を行い、設定を変更できます。  
+   ![image](https://github.com/tp-jp/udon-monitoring/assets/130125691/1a522e20-a8e0-4c1d-b25a-4b22d424d2fc)
+
    - Is Show Owner  
      有効にするとオーナー情報が表示します。
    - Is Convert Nicify Name  
