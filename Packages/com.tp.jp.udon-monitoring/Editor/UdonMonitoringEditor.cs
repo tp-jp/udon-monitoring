@@ -16,9 +16,6 @@ namespace TpLab.UdonMonitoring.Editor
             _target = _target ? _target : target as Udon.UdonMonitoring;
         }
 
-        // 対象スクリプトのフィルター
-        // 更新間隔
-
         /// <summary>
         /// Udonスクリプトをセットアップする。
         /// </summary>
@@ -34,6 +31,7 @@ namespace TpLab.UdonMonitoring.Editor
             var detailViews = new List<GameObject>();
             var detailButtons = new List<Button>();
             var profiles = _target.TargetScripts
+                .Where(x => x != null)
                 .Select(x => new ScriptProfile(x))
                 .ToArray();
             var setting = UdonMonitoringSetting.Instance;

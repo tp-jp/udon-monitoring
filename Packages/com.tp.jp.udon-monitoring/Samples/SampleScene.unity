@@ -385,6 +385,13 @@ MonoBehaviour:
   vector2Value: {x: 2.3, y: 4.5}
   vector3Value: {x: 2.345, y: 3.456, z: 4.567}
   quaternionValue: {x: 0, y: 0, z: 0, w: 1}
+  intArray: 02000000030000000400000005000000
+  dataListValue:
+    _values:
+    - _tokenType: 6
+    - _tokenType: 6
+    - _tokenType: 6
+    - _tokenType: 6
 --- !u!4 &95449350
 Transform:
   m_ObjectHideFlags: 0
@@ -571,6 +578,13 @@ MonoBehaviour:
   vector2Value: {x: 3.4, y: 5.6}
   vector3Value: {x: 3.456, y: 4.567, z: 5.678}
   quaternionValue: {x: 0, y: 0, z: 0, w: 1}
+  intArray: 03000000040000000500000006000000
+  dataListValue:
+    _values:
+    - _tokenType: 6
+    - _tokenType: 6
+    - _tokenType: 6
+    - _tokenType: 6
 --- !u!4 &1151267655
 Transform:
   m_ObjectHideFlags: 0
@@ -774,6 +788,13 @@ MonoBehaviour:
   vector2Value: {x: 1.2, y: 3.4}
   vector3Value: {x: 1.234, y: 2.345, z: 3.456}
   quaternionValue: {x: 0, y: 0, z: 0, w: 1}
+  intArray: 01000000020000000300000004000000
+  dataListValue:
+    _values:
+    - _tokenType: 6
+    - _tokenType: 6
+    - _tokenType: 6
+    - _tokenType: 6
 --- !u!1 &2122247590
 GameObject:
   m_ObjectHideFlags: 0

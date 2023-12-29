@@ -41,6 +41,9 @@ namespace TpLab.UdonMonitoring.Udon.Samples
         Quaternion quaternionValue = Quaternion.identity;
 
         [SerializeField]
+        int[] intArray = { 1, 2, 3, 4 };
+
+        [SerializeField]
         DataList dataListValue = new DataList()
         {
             1, 2, 3, 4
