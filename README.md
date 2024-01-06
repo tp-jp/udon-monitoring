@@ -21,7 +21,7 @@ vpm add repo https://tp-jp.github.io/vpm-repos/index.json
 VCCから任意のプロジェクトを選択し、「Manage Project」から「Manage Packages」を開きます。
 一覧の中から `UdonMonitoring` の右にある「＋」ボタンをクリックするか「Installed Vection」から任意のバージョンを選択することで、プロジェクトにインポートします。
 
-リポジトリを使わずに導入したい場合は [releases](https://github.com/tp-jp/light-probe-generator/releases) から unitypackage をダウンロードして、プロジェクトにインポートしてください。
+リポジトリを使わずに導入したい場合は [releases](https://github.com/tp-jp/udon-monitoring/releases) から unitypackage をダウンロードして、プロジェクトにインポートしてください。
 
 ## 使い方
 
