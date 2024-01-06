@@ -2,6 +2,8 @@
 UdonSharpの状態を監視するデバッグツール。  
 VRChatのワールド作成時などにご利用ください。
 
+![image](https://github.com/tp-jp/udon-monitoring/assets/130125691/81b4a72c-f87d-4d64-a934-f7e36484223c)
+
 ## 導入方法
 
 VCCをインストール済みの場合、以下の**どちらか一つ**の手順を行うことでインポートできます。
