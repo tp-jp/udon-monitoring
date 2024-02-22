@@ -48,5 +48,7 @@ namespace TpLab.UdonMonitoring.Udon.Samples
         {
             1, 2, 3, 4
         };
+
+        int TestProperty { get; set; } = 1;
     }
 }

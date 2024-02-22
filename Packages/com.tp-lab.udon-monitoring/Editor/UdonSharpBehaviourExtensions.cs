@@ -9,7 +9,7 @@ namespace TpLab.UdonMonitoring.Editor
         /// フィールド一覧を取得する。
         /// </summary>
         /// <param name="self">UdonSharpBehaviour</param>
-        /// <returns>Publicフィールド一覧</returns>
+        /// <returns>フィールド一覧</returns>
         public static FieldInfo[] GetFields(this UdonSharpBehaviour self)
             => self.GetType().GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
 

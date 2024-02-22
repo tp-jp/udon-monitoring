@@ -1,5 +1,5 @@
 {
-    "name": "com.tp.jp.udon-monitoring.Editor",
+    "name": "com.tp-lab.udon-monitoring.Editor",
     "references": [
         "VRC.SDK3",
         "VRC.SDK3.Editor",
@@ -7,8 +7,8 @@
         "VRC.SDKBase.Editor",
         "UdonSharp.Runtime",
         "UdonSharp.Editor",
-        "com.tp.jp.udon-monitoring",
-        "com.tp.jp.udon-monitoring.Udon"
+        "com.tp-lab.udon-monitoring",
+        "com.tp-lab.udon-monitoring.Udon"
     ],
     "includePlatforms": [
         "Editor"

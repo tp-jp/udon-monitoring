@@ -1,7 +1,7 @@
 {
   "dependencies": {
-    "com.tp.jp.udon-monitoring": {
-      "version": "file:com.tp.jp.udon-monitoring",
+    "com.tp-lab.udon-monitoring": {
+      "version": "file:com.tp-lab.udon-monitoring",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Newtonsoft.Json;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -88,8 +89,8 @@ namespace TpLab.UdonMonitoring.Editor
                 udonDetailView.SetFieldValue("ownerValue", ownerValue);
                 udonDetailView.SetFieldValue("isShowOwner", setting.IsShowOwner);
                 udonDetailView.SetFieldValue("targetScript", profile.Script);
-                udonDetailView.SetFieldValue("fieldMetadataJson", JsonHelper.ToJson(profile.Fields.Select(x => x.GetMetadata())));
-                udonDetailView.SetFieldValue("settingMetadataJson", JsonUtility.ToJson(settingMetadata));
+                udonDetailView.SetFieldValue("fieldMetadataJson", JsonConvert.SerializeObject(profile.Fields.Select(x => x.GetMetadata())));
+                udonDetailView.SetFieldValue("settingMetadataJson", JsonConvert.SerializeObject(settingMetadata));
             }
 
             _target.SetFieldValue("detailViews", detailViews.ToArray());
