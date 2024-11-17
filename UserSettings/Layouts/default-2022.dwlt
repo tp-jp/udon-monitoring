@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Inspector
   m_RootView: {fileID: 5}
   m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 1
-  controlID: 17
+  controlID: 16
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 122
+  controlID: 121
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 18
+  controlID: 17
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -221,7 +221,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 19
+  controlID: 18
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1044,9 +1044,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.88981867, y: 0.37433267, z: 0.39660525}
+    m_Target: {x: -0.2, y: 1.34, z: 1.5}
     speed: 2
-    m_Value: {x: -0.88981867, y: 0.37433267, z: 0.39660525}
+    m_Value: {x: -0.2, y: 1.34, z: 1.5}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1092,13 +1092,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.060226917, y: 0.9179312, z: -0.15314037, w: -0.36100316}
+    m_Target: {x: 0.07601644, y: 0.103013135, z: -0.007895915, w: 0.9917395}
     speed: 2
-    m_Value: {x: -0.06045655, y: 0.91738856, z: -0.15304984, w: -0.3623796}
+    m_Value: {x: -0.07601645, y: -0.10301314, z: 0.007895915, w: -0.9917396}
   m_Size:
-    m_Target: 2.63086
+    m_Target: 0.8660254
     speed: 2
-    m_Value: 2.7548273
+    m_Value: 0.8660254
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1268,7 +1268,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 62432
+  m_LastSelectedObjectID: -136042
 --- !u!114 &24
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1307,9 +1307,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 70a40000
+      m_SelectedIDs: ea630000
       m_LastClickedID: 0
-      m_ExpandedIDs: 60eefeff56f0feff68f4feff
+      m_ExpandedIDs: d4faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1379,7 +1379,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Packages/com.tp-lab.udon-monitoring/Samples
+    - Packages/com.tp-lab.udon-monitoring/Editor/Fonts
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1388,14 +1388,14 @@ MonoBehaviour:
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\unity\github\worlds\udon-monitoring
+  m_LastProjectPath: D:\unity\projects\worlds\udon-monitoring
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 42590000
     m_LastClickedID: 22850
-    m_ExpandedIDs: 00000000bc060000a8070000d80700005408000064080000e8080000300a0000ec0a0000340e0000f2b20000f4b20000f6b20000f8b20000fab20000
+    m_ExpandedIDs: 000000002a5d0000726300007463000076630000786300007a6300007c630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1420,10 +1420,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 288}
+    scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000bc060000a8070000d80700005408000064080000e8080000300a0000ec0a0000340e0000f2b20000f4b20000f6b20000f8b20000fab20000ffffff7f
+    m_ExpandedIDs: ffffffff000000002a5d0000726300007463000076630000786300007a6300007c630000ba630000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

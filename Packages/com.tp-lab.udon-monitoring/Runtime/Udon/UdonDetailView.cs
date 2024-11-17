@@ -1,4 +1,5 @@
 ﻿using System;
+using TMPro;
 using UdonSharp;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,19 +13,19 @@ namespace TpLab.UdonMonitoring.Udon
     public class UdonDetailView : UdonSharpBehaviour
     {
         [SerializeField]
-        Text detailTitle;
+        TextMeshProUGUI detailTitle;
 
         [SerializeField]
-        Text[] variableNames;
+        TextMeshProUGUI[] variableNames;
 
         [SerializeField]
-        Text[] variableValues;
+        TextMeshProUGUI[] variableValues;
 
         [SerializeField]
         GameObject ownerRecord;
 
         [SerializeField]
-        Text ownerValue;
+        TextMeshProUGUI ownerValue;
 
         [SerializeField]
         bool isShowOwner;

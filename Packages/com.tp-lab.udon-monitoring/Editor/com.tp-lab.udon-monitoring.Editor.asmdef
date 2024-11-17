@@ -1,5 +1,6 @@
 {
     "name": "com.tp-lab.udon-monitoring.Editor",
+    "rootNamespace": "",
     "references": [
         "VRC.SDK3",
         "VRC.SDK3.Editor",
@@ -7,6 +8,8 @@
         "VRC.SDKBase.Editor",
         "UdonSharp.Runtime",
         "UdonSharp.Editor",
+        "Unity.TextMeshPro",
+        "Unity.TextMeshPro.Editor",
         "com.tp-lab.udon-monitoring",
         "com.tp-lab.udon-monitoring.Udon"
     ],

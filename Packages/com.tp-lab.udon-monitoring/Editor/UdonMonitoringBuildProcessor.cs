@@ -1,5 +1,3 @@
-using System.Linq;
-using UnityEditor;
 using UnityEditor.Build;
 using UnityEditor.Build.Reporting;
 using UnityEngine;
@@ -18,24 +16,13 @@ namespace TpLab.UdonMonitoring.Editor
         /// <param name="report">ビルドレポート</param>
         public void OnProcessScene(Scene scene, BuildReport report)
         {
-            var targets = FindObjectsOfType<Udon.UdonMonitoring>();
+            var targets = Object.FindObjectsOfType<Udon.UdonMonitoring>(true);
             foreach (var target in targets)
             {
                 var editor = UnityEditor.Editor.CreateEditor(target, typeof(UdonMonitoringEditor)) as UdonMonitoringEditor;
+                if (!editor) continue;
                 editor.SetupUdonScript();
             }
-        }
-
-        /// <summary>
-        /// 指定した型で見つかったオブジェクト一覧を取得する。
-        /// </summary>
-        /// <typeparam name="T">型</typeparam>
-        /// <returns>オブジェクト一覧</returns>
-        T[] FindObjectsOfType<T>() where T : Component
-        {
-            return Resources.FindObjectsOfTypeAll<T>()
-                .Where(x => AssetDatabase.GetAssetOrScenePath(x).EndsWith(".unity"))
-                .ToArray();
         }
     }
 }

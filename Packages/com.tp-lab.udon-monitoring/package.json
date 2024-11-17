@@ -1,7 +1,7 @@
 {
   "name": "com.tp-lab.udon-monitoring",
   "displayName": "UdonMonitoring",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "unity": "2022.3",
   "description": "UdonSharp\u306e\u72b6\u614b\u3092\u76e3\u8996\u3059\u308b\u30c4\u30fc\u30eb\u3002",
   "gitDependencies": {},
@@ -12,5 +12,8 @@
     "name": "tp.jp"
   },
   "legacyFolders": {},
-  "legacyFiles": {}
+  "legacyFiles": {},
+  "dependencies": {
+    "com.unity.textmeshpro": "3.0.6"
+  }
 }

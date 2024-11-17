@@ -1,4 +1,5 @@
-﻿using UdonSharp;
+﻿using TMPro;
+using UdonSharp;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +9,7 @@ namespace TpLab.UdonMonitoring.Udon
     public class UdonDetailButton : UdonSharpBehaviour
     {
         [SerializeField]
-        Text objectName;
+        TextMeshProUGUI objectName;
 
         [SerializeField]
         Image activeLine;
